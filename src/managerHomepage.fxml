@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="854.0" style="-fx-background-color: #f7f7e8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="managerHomepage">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #798777;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="171.0" fitWidth="179.0" layoutX="30.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/Marmara_Universitesi_logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Logout" layoutX="49.0" layoutY="453.0" mnemonicParsing="false" onAction="#Logout" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #9dad7f;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="homeSettings" layoutX="49.0" layoutY="411.0" mnemonicParsing="false" onAction="#settings" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #9dad7f;" text="Profile Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Label fx:id="isim" layoutX="23.0" layoutY="296.0" prefHeight="42.0" prefWidth="182.0" textFill="#c10404" wrapText="true" />
+            <Button fx:id="manHomeDel" layoutX="49.0" layoutY="365.0" mnemonicParsing="false" onAction="#DeleteUserButton" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #9dad7f;" text="Delete User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="manHomeAdd" layoutX="49.0" layoutY="325.0" mnemonicParsing="false" onAction="#AddUserButton" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #9dad7f;" text="Add User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="466.0" prefWidth="596.0" style="-fx-background-color: #f7f7e8;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="homepageTable" layoutX="29.0" layoutY="64.0" prefHeight="406.0" prefWidth="522.0">
+              <columns>
+                <TableColumn fx:id="usernameColumn" prefWidth="75.0" text="Username" />
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="Surname" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="79.0" text="Phone" />
+                  <TableColumn fx:id="emailColumn" prefWidth="131.0" text="E-Mail" />
+                  <TableColumn fx:id="genderColumn" maxWidth="108.0" prefWidth="86.0" text="Gender" />
+              </columns>
+            </TableView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <TextField fx:id="ManagerUname" layoutX="29.0" layoutY="489.0" prefHeight="24.0" prefWidth="72.0" />
+            <TextField fx:id="ManName" layoutX="109.0" layoutY="489.0" prefHeight="24.0" prefWidth="67.0" />
+            <TextField fx:id="ManSurname" layoutX="192.0" layoutY="489.0" prefHeight="24.0" prefWidth="71.0" />
+            <TextField fx:id="ManPhone" layoutX="282.0" layoutY="489.0" prefHeight="24.0" prefWidth="85.0" />
+            <TextField fx:id="ManMail" layoutX="373.0" layoutY="489.0" prefHeight="24.0" prefWidth="96.0" />
+            <TextField fx:id="ManGender" layoutX="486.0" layoutY="489.0" prefHeight="24.0" prefWidth="65.0" />
+            <Text layoutX="51.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uname" />
+            <Text layoutX="128.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text layoutX="213.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+            <Text layoutX="310.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+            <Text layoutX="407.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" />
+            <Text layoutX="504.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

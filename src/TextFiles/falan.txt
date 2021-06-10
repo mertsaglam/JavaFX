@@ -1,0 +1,119 @@
+private int searchLine() {
+    try
+    {
+               BufferedReader file = new BufferedReader(new FileReader("/home/mert/Desktop/hellofx/src/TextFiles/data.txt"));
+               String line1;
+               String input1 = "";
+               while ((line1 = file.readLine()) != null) 
+               {
+                   //System.out.println(line);
+                   if (line1.contains( registerEmail.getText()))
+                   {
+                       
+                       System.out.println("your email is not unique.");
+                       Alert msg = new Alert(AlertType.CONFIRMATION);
+                       msg.setTitle(registerEmail.getText());
+                       msg.setContentText("Your email is not unique.");
+                       msg.showAndWait();
+                        return 1;
+                       
+                   }
+                   input1 += line1 + '\n';
+               }
+               FileOutputStream File = new FileOutputStream("/home/mert/Desktop/hellofx/src/TextFiles/data.txt");
+               File.write(input1.getBytes());
+               file.close();
+               File.close();
+               return 0;
+
+    }
+       catch (Exception e)
+       {
+            
+               System.out.println(e);
+               return 1;
+
+       }
+
+
+
+
+
+
+
+        private void removeLine() {
+        try
+           {
+                   BufferedReader file = new BufferedReader(new FileReader("/home/mesa/Desktop/JavaFXProject/hellofx/src/TextFiles/data.txt"));
+                   String line;
+                   String input = "";
+                   while ((line = file.readLine()) != null) 
+                   {
+                       //System.out.println(line);
+                       if (line.contains(User.getEmail()))
+                       {
+                           line = "";
+                           System.out.println("Line deleted.");
+                       }
+                       input += line + '\n';
+                   }
+                   FileOutputStream File = new FileOutputStream("/home/mesa/Desktop/JavaFXProject/hellofx/src/TextFiles/data.txt");
+                   File.write(input.getBytes());
+                   file.close();
+                   File.close();
+           }
+           catch (Exception e)
+           {
+                   System.out.println("Problem reading file.");
+           }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+private int searchLine() {
+    try
+    {
+               BufferedReader file = new BufferedReader(new FileReader("/home/mert/Desktop/hellofx/src/TextFiles/data.txt"));
+               String line1;
+               String input1 = "";
+               while ((line1 = file.readLine()) != null) 
+               {
+                   //System.out.println(line);
+                   if (line1.contains( registerEmail.getText()))
+                   {
+                       
+                       System.out.println("your email is not unique.");
+                       Alert msg = new Alert(AlertType.CONFIRMATION);
+                       msg.setTitle(registerEmail.getText());
+                       msg.setContentText("Your email is not unique.");
+                       msg.showAndWait();
+                        return 1;
+                       
+                   }
+                   input1 += line1 + '\n';
+               }
+               FileOutputStream File = new FileOutputStream("/home/mert/Desktop/hellofx/src/TextFiles/data.txt");
+               File.write(input1.getBytes());
+               file.close();
+               File.close();
+               return 0;
+
+    }
+       catch (Exception e)
+       {
+            
+               System.out.println(e);
+               return 1;
+
+       }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="701.0" style="-fx-background-color: #f7f7e8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profileSettings">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #798777;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="151.0" layoutX="43.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/Marmara_Universitesi_logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="cancelButton" layoutX="24.0" layoutY="380.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="179.0" style="-fx-background-color: #9dad7f;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="55.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Settings" textAlignment="CENTER" wrappingWidth="116.32699584960938">
+               <font>
+                  <Font name="Californian FB" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="539.0" prefWidth="579.0" style="-fx-background-color: #f7f7e8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="32.0" layoutY="208.0" text="Old Password:*">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="settingsOldPass" layoutX="32.0" layoutY="248.0" prefHeight="26.0" prefWidth="163.0" />
+            <Button fx:id="SaveButton" layoutX="121.0" layoutY="343.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: #9dad7f;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="236.0" layoutY="109.0" text=" New Password:*">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="settingsNewPass" layoutX="270.0" layoutY="163.0" prefHeight="26.0" prefWidth="163.0" />
+            <PasswordField fx:id="settingsNewPassRepeat" layoutX="270.0" layoutY="248.0" prefHeight="26.0" prefWidth="163.0" />
+            <Label layoutX="236.0" layoutY="208.0" text=" Repeat New Password:*">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="settingsEmail" cache="true" layoutX="32.0" layoutY="163.0" prefHeight="26.0" prefWidth="163.0" />
+            <Label layoutX="37.0" layoutY="109.0" text="Email:*">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="296.0" text="(*) Please do not leave empty.">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
